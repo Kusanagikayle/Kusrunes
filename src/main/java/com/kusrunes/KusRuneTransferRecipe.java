@@ -104,7 +104,7 @@ public class KusRuneTransferRecipe extends IForgeRegistryEntry.Impl<IRecipe> imp
 
             // Reduce the effectiveness of attributes by 90% for new attributes
             for (int i = 0; i < targetModifiers.tagCount(); i++) {
-                NBTTagCompound modifier = targetModifiers.get(i);
+                NBTTagCompound modifier = (NBTTagCompound) targetModifiers.get(i);
                 double amount = modifier.getDouble("Amount");
 
                 // Check if the attribute was added after 20 transfers
